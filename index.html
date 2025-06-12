@@ -60,12 +60,12 @@
   <div class="form-container">
     <h2>Join Owen's Membership</h2>
     
+<form action="https://formspree.io/f/myzjwjyw" method="POST">
+  <input type="text" name="name" placeholder="Full Name" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="url" name="id_link" placeholder="Link to your ID (Google Drive, Dropbox, etc)" required>
+  <button type="submit">Submit</button>
 </form>
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email" required>
-      <input type="url" name="id_link" placeholder="Link to your ID (e.g. Google Drive)" required>
-      <button type="submit">Submit</button>
-    </form>
       
 <div id="thankYouMessage" style="display: none;">
   ✅ Thank you for registering! We’ve received your submission.
@@ -74,10 +74,12 @@
   const form = document.querySelector('form');
   const thankYouMessage = document.getElementById('thankYouMessage');
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault(); // prevent default form submission
-    form.style.display = 'none'; // hide the form
-    thankYouMessage.style.display = 'block'; // show the message
-  });
+  /*
+form.addEventListener('submit', function(e) {
+  e.preventDefault(); // This blocks the form from submitting to Formspree
+  form.style.display = 'none';
+  thankYouMessage.style.display = 'block';
+});
+*/
 </script>
 </html>
